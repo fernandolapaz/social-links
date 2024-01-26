@@ -1,0 +1,110 @@
+@font-face {
+	font-family: 'Inter';
+	src: url(./assets/fonts/static/Inter-Regular.ttf), local('Inter');
+	font-weight: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src: url(./assets/fonts/static/Inter-Bold.ttf), local('Inter');
+	font-weight: bold;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src: url(./assets/fonts/static/Inter-SemiBold.ttf), local('Inter');
+	font-weight: 600;
+	font-display: swap;
+}
+
+:root {
+	--clr-primary: hsl(75, 94%, 57%);
+	--clr-neutral-1: hsl(0, 0%, 100%);
+	--clr-neutral-2: hsl(0, 0%, 20%);
+	--clr-neutral-3: hsl(0, 0%, 12%);
+	--clr-neutral-4: hsl(0, 0%, 8%);
+}
+
+body {
+	min-height: 100vh;
+	display: grid;
+	justify-content: stretch;
+	align-content: center;
+	background-color: var(--clr-neutral-4);
+	padding: 1.5rem;
+	font-family: 'Inter', sans-serif;
+	line-height: 1;
+}
+
+/* Card */
+main {
+	display: grid;
+	justify-items: center;
+	gap: 0.8rem;
+	background-color: var(--clr-neutral-3);
+	border-radius: 1rem;
+	padding: 1.5rem;
+	font-size: 0.875rem;
+	color: var(--clr-neutral-1);
+	text-align: center;
+}
+
+.avatar {
+	width: 5.5rem;
+	border-radius: 50%;
+	margin-bottom: 1.1rem;
+}
+
+.name {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.location {
+	color: var(--clr-primary);
+	font-weight: 600;
+}
+
+.description {
+	quotes: none;
+	margin: 1.15rem 0 0.85rem;
+}
+
+nav {
+	width: 100%;
+
+	& .links-list {
+		display: grid;
+		gap: 0.98rem;
+
+		& .link {
+			display: block;
+			background-color: var(--clr-neutral-2);
+			border-radius: 0.5rem;
+			padding: 1.02rem 0.5rem 0.94rem;
+			text-decoration: none;
+			font-weight: 600;
+			color: var(--clr-neutral-1);
+
+			&:hover,
+			&:focus-visible {
+				background-color: var(--clr-primary);
+				color: var(--clr-neutral-4);
+			}
+		}
+	}
+}
+
+/* Desktop */
+@media screen and (min-width: 27rem) {
+	body {
+		justify-content: center;
+	}
+
+	main {
+		width: 24rem;
+		padding: 2.5rem;
+	}
+}
